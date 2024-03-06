@@ -58,13 +58,16 @@ runs:
         pip install -r requirements.txt
 
     - name: Install pyproject.toml dependencies
-      shell: "bash"
       if: steps.check-requirements.outputs.pyproject_exists == 'true'
-      run: |
-        python -m pip install --upgrade pip
-        pip install poetry
-        /usr/bin/poetry config virtualenvs.create false
-        poetry install --no-interaction
+      uses: snok/install-poetry@v1
+      with:
+        virtualenvs-create: flalse
+        virtualenvs-in-project: flalse
+      # run: |
+      #   python -m pip install --upgrade pip
+      #   pip install poetry
+      #   /usr/bin/poetry config virtualenvs.create false
+      #   poetry install --no-interaction
 
     - name: "Generating API"
       shell: "bash"
