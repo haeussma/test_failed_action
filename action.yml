@@ -79,10 +79,10 @@ runs:
 
         if [[ -n "${{ inputs.branch }}" ]]; then
           printf "::group::🔧 Installing dependencies\n"
-          python -m pip install git+https://github.com/JR-1991/software-driven-rdm.git@${{ inputs.branch }}
+          python pip install git+https://github.com/JR-1991/software-driven-rdm.git@${{ inputs.branch }}
         else
           printf "::group::🔧 Installing dependencies\n"
-          python -m pip install sdrdm
+          python pip install sdrdm
         fi
 
         sdrdm generate \
