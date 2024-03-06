@@ -68,6 +68,10 @@ runs:
       #   /usr/bin/poetry config virtualenvs.create false
       #   poetry install --no-interaction
 
+    - name: Print pip list to stdout
+      run: |
+        pip list
+
     - name: "Generating API"
       shell: "bash"
       run: |
