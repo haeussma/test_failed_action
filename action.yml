@@ -46,9 +46,11 @@ runs:
         echo "checking for requirements.txt or pyproject.toml"
         if [ -f requirements.txt ]; then
           echo "requirements_exists=true" >> $GITHUB_OUTPUT
+          printf "requirements.txt exists\n"
         fi
         if [ -f pyproject.toml ]; then
           echo "pyproject_exists=true" >> $GITHUB_OUTPUT
+          printf "pyproject.toml exists\n"
         fi
     - name: Install requirements.txt dependencies
       shell: "bash"
