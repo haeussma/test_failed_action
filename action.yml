@@ -85,6 +85,7 @@ runs:
         else
           printf "::group::🔧 Installing dependencies\n"
           python -m pip install sdrdm
+          python -m pip install plotly
         fi
 
         sdrdm generate \
