@@ -12,7 +12,7 @@ from plotly import graph_objects as go
 class Image(
     sdRDM.DataModel,
     nsmap={
-        "": "https://github.com/haeussma/test_failed_action@f9f0e8c3a2523cf520a3c3de355622cc4604225b#Image"
+        "": "https://github.com/haeussma/test_failed_action@6220961b5310b48385e02042a0485cbcdc68dcbb#Image"
     },
 ):
     """"""
@@ -48,7 +48,7 @@ class Image(
         default="https://github.com/haeussma/test_failed_action"
     )
     _commit: Optional[str] = PrivateAttr(
-        default="f9f0e8c3a2523cf520a3c3de355622cc4604225b"
+        default="6220961b5310b48385e02042a0485cbcdc68dcbb"
     )
 
     def plot(self):
