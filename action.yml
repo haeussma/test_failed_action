@@ -69,8 +69,8 @@ runs:
       #   poetry install --no-interaction
 
     - name: Print pip list to stdout
-      run: |
-        pip list
+      shell: "bash"
+      run: pip list
 
     - name: "Generating API"
       shell: "bash"
