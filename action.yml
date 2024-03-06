@@ -46,11 +46,9 @@ runs:
         echo "checking for requirements.txt or pyproject.toml"
         if [ -f requirements.txt ]; then
           echo "requirements_exists=true" >> $GITHUB_OUTPUT
-          printf "requirements.txt exists\n"
         fi
         if [ -f pyproject.toml ]; then
           echo "pyproject_exists=true" >> $GITHUB_OUTPUT
-          printf "pyproject.toml exists\n"
         fi
     - name: Install requirements.txt dependencies
       shell: "bash"
@@ -81,10 +79,10 @@ runs:
 
         if [[ -n "${{ inputs.branch }}" ]]; then
           printf "::group::🔧 Installing dependencies\n"
-          python pip install git+https://github.com/JR-1991/software-driven-rdm.git@${{ inputs.branch }}
+          pip install git+https://github.com/JR-1991/software-driven-rdm.git@${{ inputs.branch }}
         else
           printf "::group::🔧 Installing dependencies\n"
-          python pip install sdrdm
+          pip install sdrdm
         fi
 
         sdrdm generate \
