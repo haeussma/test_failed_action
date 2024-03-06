@@ -13,7 +13,7 @@ from .image import Image
 class User(
     sdRDM.DataModel,
     nsmap={
-        "": "https://github.com/haeussma/test_failed_action@6d010318531f4217249085276ad65a3904f242e3#User"
+        "": "https://github.com/haeussma/test_failed_action@f9f0e8c3a2523cf520a3c3de355622cc4604225b#User"
     },
 ):
     """"""
@@ -49,7 +49,7 @@ class User(
         default="https://github.com/haeussma/test_failed_action"
     )
     _commit: Optional[str] = PrivateAttr(
-        default="6d010318531f4217249085276ad65a3904f242e3"
+        default="f9f0e8c3a2523cf520a3c3de355622cc4604225b"
     )
 
     def time_consuming_function(self):
