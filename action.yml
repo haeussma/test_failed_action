@@ -1,7 +1,7 @@
 # BEGIN: 8zv7t5r2n6p1
 name: generate-sdrdm-api
 description: |
-  "This action generates the sdRDM API from an sdRDM Markdown schema."
+  "This action generates the sdRDM API from a sdRDM Markdown schema."
 inputs:
   library_name:
     description: "The name of the library to be generated."
@@ -57,16 +57,10 @@ runs:
         python -m pip install --upgrade pip
         python -m pip install -r requirements.txt
 
-    - name: Setup Poetry
-      if: steps.check-requirements.outputs.pyproject_exists == 'true'
-      uses: snok/install-poetry@v1
-      with:
-        virtualenvs-create: false
-
     - name: Install pyproject.toml dependencies
       if: steps.check-requirements.outputs.pyproject_exists == 'true'
       shell: "bash"
-      run: poetry install --no-interaction
+      run: python -m pip install .
 
     - name: "Generating API"
       shell: "bash"
