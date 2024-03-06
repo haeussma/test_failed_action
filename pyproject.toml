@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "user"
+version = "0.1.0"
+description = ""
+authors = ["haeussma <83341109+haeussma@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+plotly = "^5.19.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

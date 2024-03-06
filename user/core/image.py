@@ -1,4 +1,6 @@
 import sdRDM
+from plotly import graph_objects as go
+
 
 from typing import Optional
 from uuid import uuid4
@@ -43,3 +45,6 @@ class Image(
     _commit: Optional[str] = PrivateAttr(
         default="4f255cf31d744edfd1931fd853db97b5197c2ba2"
     )
+
+    def plot(self):
+        return go.Figure(go.Image(source=self.url))
