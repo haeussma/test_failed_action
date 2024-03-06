@@ -1,4 +1,5 @@
 import sdRDM
+from tqdm import tqdm
 
 from typing import Optional
 from pydantic import PrivateAttr
@@ -50,3 +51,7 @@ class User(
     _commit: Optional[str] = PrivateAttr(
         default="c3a51b7ce72716b12d70718546af7ce72d87ed91"
     )
+
+    def time_consuming_function(self):
+        for _ in tqdm(range(100)):
+            pass

@@ -22,5 +22,8 @@
 - size
     - Type: float
     - Description: size in MB
+- type
+    - Type: string
+    - Description: description
 
 
