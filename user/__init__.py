@@ -1,3 +1,3 @@
 
 __URL__ = "https://github.com/haeussma/test_failed_action"
-__COMMIT__ = "c3a51b7ce72716b12d70718546af7ce72d87ed91"
+__COMMIT__ = "6d010318531f4217249085276ad65a3904f242e3"

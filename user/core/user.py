@@ -1,11 +1,11 @@
 import sdRDM
-from tqdm import tqdm
 
 from typing import Optional
 from pydantic import PrivateAttr
 from uuid import uuid4
 from pydantic_xml import attr, element
 from sdRDM.base.utils import forge_signature
+from tqdm import tqdm
 from .image import Image
 
 
@@ -13,7 +13,7 @@ from .image import Image
 class User(
     sdRDM.DataModel,
     nsmap={
-        "": "https://github.com/haeussma/test_failed_action@c3a51b7ce72716b12d70718546af7ce72d87ed91#User"
+        "": "https://github.com/haeussma/test_failed_action@6d010318531f4217249085276ad65a3904f242e3#User"
     },
 ):
     """"""
@@ -49,7 +49,7 @@ class User(
         default="https://github.com/haeussma/test_failed_action"
     )
     _commit: Optional[str] = PrivateAttr(
-        default="c3a51b7ce72716b12d70718546af7ce72d87ed91"
+        default="6d010318531f4217249085276ad65a3904f242e3"
     )
 
     def time_consuming_function(self):

@@ -11,6 +11,7 @@ classDiagram
     class Image {
         +string url
         +float size
+        +string type
     }
     
 ```
