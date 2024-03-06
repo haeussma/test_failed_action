@@ -71,7 +71,8 @@ runs:
       run: |
         python -m pip install --upgrade pip
         pip install poetry
-        poetry install
+        /usr/bin/poetry config virtualenvs.create false
+        poetry install --no-interaction
 
 
     - name: "Generating API"
@@ -85,7 +86,6 @@ runs:
         else
           printf "::group::🔧 Installing dependencies\n"
           python -m pip install sdrdm
-          python -m pip install plotly
         fi
 
         sdrdm generate \
