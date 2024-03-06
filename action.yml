@@ -55,7 +55,7 @@ runs:
       if: steps.check-requirements.outputs.requirements_exists == 'true'
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        python -m pip install -r requirements.txt
 
     - name: Setup Poetry
       if: steps.check-requirements.outputs.pyproject_exists == 'true'
@@ -64,17 +64,9 @@ runs:
         virtualenvs-create: false
 
     - name: Install pyproject.toml dependencies
+      if: steps.check-requirements.outputs.pyproject_exists == 'true'
       shell: "bash"
       run: poetry install --no-interaction
-      # run: |
-      #   python -m pip install --upgrade pip
-      #   pip install poetry
-      #   /usr/bin/poetry config virtualenvs.create false
-      #   poetry install --no-interaction
-
-    - name: Print pip list to stdout
-      shell: "bash"
-      run: pip list
 
     - name: "Generating API"
       shell: "bash"
